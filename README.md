@@ -1,4 +1,4 @@
-### PEGA Protocol — An open, modular escrow protocol for work and DAO coordination, built by ChileDAO.
+# **PEGA Protocol** — An open, modular escrow protocol for work and DAO coordination, built by ChileDAO.
 
          ..-+*#%%##*+-.  -+++++:      ++++++. :+++++-  ++++++.       .=+++++++++++++=.
             .-@@@@@@@@@@@@@@: *@@@@@-      @@@@@@. =@@@@@+  @@@@@@.       .#@@@@@@@@@@@@@#.
