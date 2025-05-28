@@ -45,14 +45,6 @@ const nextConfig = {
       },
     ];
   },
-  // Ensure static files are included in the build
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.(ico|png)$/,
-      type: 'asset/resource',
-    });
-    return config;
-  },
   // Disable static optimization for the root page
   output: 'standalone',
 }
