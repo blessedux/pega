@@ -55,19 +55,6 @@ const nextConfig = {
   },
   // Disable static optimization for the root page
   output: 'standalone',
-  // Add rewrites to ensure static assets are served correctly
-  async rewrites() {
-    return [
-      {
-        source: '/favicon.ico',
-        destination: '/public/favicon.ico',
-      },
-      {
-        source: '/chiledaodots.png',
-        destination: '/public/chiledaodots.png',
-      },
-    ];
-  },
 }
 
 module.exports = nextConfig 
