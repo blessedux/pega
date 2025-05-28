@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Dework Dark Theme Colors */
+    --dework-bg: #151619;
+    --dework-surface: #1e1f24;
+    --dework-border: #3e3959;
+    --dework-text: #bcb8c9;
+    --dework-text-muted: #67656d;
+    --dework-purple: #836de7;
+    --dework-purple-light: #9b87ed;
+    --dework-green: #75956e;
+
+    /* shadcn compatible variables */
+    --background: 216 14% 8%;
+    --foreground: 275 9% 74%;
+    --card: 216 12% 12%;
+    --card-foreground: 275 9% 74%;
+    --popover: 216 12% 12%;
+    --popover-foreground: 275 9% 74%;
+    --primary: 256 44% 66%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 275 9% 74%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 275 6% 40%;
+    --accent: 256 44% 66%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 252 15% 23%;
+    --input: 252 15% 23%;
+    --ring: 256 44% 66%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 216 14% 8%;
+    --foreground: 275 9% 74%;
+    --card: 216 12% 12%;
+    --card-foreground: 275 9% 74%;
+    --popover: 216 12% 12%;
+    --popover-foreground: 275 9% 74%;
+    --primary: 256 44% 66%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 275 9% 74%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 275 6% 40%;
+    --accent: 256 44% 66%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 252 15% 23%;
+    --input: 252 15% 23%;
+    --ring: 256 44% 66%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    @apply dark;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    background-color: var(--dework-bg);
+    color: var(--dework-text);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  .dao-card {
+    background: rgba(30, 31, 36, 0.8);
+    border: 1px solid rgba(131, 109, 231, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+  }
+
+  .dao-card:hover {
+    background: rgba(30, 31, 36, 1);
+    border-color: rgba(131, 109, 231, 0.6);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(131, 109, 231, 0.25);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  .animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #836de7, #75956e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+}
