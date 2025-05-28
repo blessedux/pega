@@ -14,8 +14,6 @@ const nextConfig = {
       },
     ],
   },
-  // Disable static optimization for the root page
-  output: 'standalone',
 }
 
 module.exports = nextConfig 
